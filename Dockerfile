@@ -6,7 +6,19 @@ VOLUME /app
 
 WORKDIR /app
 
-RUN apk --no-cache --update add npm \
+RUN apk --no-cache --update add \
+        autoconf \
+        automake \
+        curl \
+        g++ \
+        gcc \
+        git \
+        libpng-dev \
+        libtool \
+        make \
+        nasm \
+        npm \
+        openssh \
     && npm install npm@6.3.0 -g \
     && addgroup  app \
     && adduser -D -G app app \
